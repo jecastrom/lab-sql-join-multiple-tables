@@ -89,6 +89,31 @@ image::https://user-images.githubusercontent.com/63274055/150211137-c1062ac7-dc7
 
 === Write a query to display how much business, in dollars, each store brought in.
 
+`*_Answer:_*`
+
+```sql
+SELECT
+    s.store_id,
+    c.city,
+    co.country,
+    sum(p.amount) AS total_sales
+FROM
+    store s
+    INNER JOIN address a ON s.address_id = a.address_id
+    INNER JOIN city c ON a.city_id = c.city_id
+    INNER JOIN country co ON c.country_id = co.country_id
+    INNER JOIN customer cu ON s.store_id = cu.store_id
+    INNER JOIN payment p ON cu.customer_id = p.customer_id
+GROUP BY
+    1
+ORDER BY
+    1;
+```
+
+image::https://user-images.githubusercontent.com/63274055/150219956-a1b9d305-692d-4513-8266-e2b1e620e9a7.png[width=600]
+
+
+
 === What is the average running time of films by category?
 
 === Which film categories are longest?
