@@ -143,6 +143,33 @@ image::https://user-images.githubusercontent.com/63274055/150233855-cc2b8709-017
 
 === Which film categories are longest?
 
+`*_Answer:_*`
+
+```sql
+SELECT
+    c.`name` AS film_category,
+    CONCAT(
+        FLOOR(ROUND((AVG(length))) / 60),
+        'h ',
+        MOD(ROUND((AVG(length))), 60),
+        'm'
+    ) AS average_movie_duration
+FROM
+    film f
+    INNER JOIN film_category fc ON f.film_id = fc.film_id
+    INNER JOIN category c ON fc.category_id = c.category_id
+GROUP BY
+    1
+ORDER BY
+    2 DESC
+LIMIT
+    4;
+```
+
+image::https://user-images.githubusercontent.com/63274055/150234709-b83c83e9-332c-4afe-bf74-38d94625c4af.png[width=600]
+
+
+
 === Display the most frequently rented movies in descending order.
 
 === List the top five genres in gross revenue in descending order.
