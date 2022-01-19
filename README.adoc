@@ -67,6 +67,26 @@ toc::[]
 
 === Write a query to display for each store its store ID, city, and country.
 
+`*_Answer:_*`
+
+```sql
+SELECT
+    s.store_id,
+    c.city,
+    co.country
+FROM
+    store s
+    INNER JOIN address a ON s.address_id = a.address_id
+    INNER JOIN city c ON a.city_id = c.city_id
+    INNER JOIN country co ON c.country_id = co.country_id
+ORDER BY
+    1;
+```
+
+image::https://user-images.githubusercontent.com/63274055/150211137-c1062ac7-dc7e-4de6-9a41-9b11051b2c9e.png[width=600]
+
+
+
 === Write a query to display how much business, in dollars, each store brought in.
 
 === What is the average running time of films by category?
