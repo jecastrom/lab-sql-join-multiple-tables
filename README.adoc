@@ -7,7 +7,7 @@
 :script-url: 
 :rel-cont: https://github.com/jecastrom/data_3.02_activities.git
 :toc:
-:toc-title: Lab description: In this lab, you will....
+:toc-title: In this lab, you will be using the Sakila database of movie rentals.
 :toc-placement!:
 :toclevels: 5
 ifdef::env-github[]
@@ -62,6 +62,22 @@ image::{image-url-ironhack}[width=70]
 toc::[]
 
 {description}
+
+= Instructions
+
+== Write a query to display for each store its store ID, city, and country.
+
+== Write a query to display how much business, in dollars, each store brought in.
+
+== What is the average running time of films by category?
+
+== Which film categories are longest?
+
+== Display the most frequently rented movies in descending order.
+
+== List the top five genres in gross revenue in descending order.
+
+== Is "Academy Dinosaur" available for rent from Store 1?
 
 
 
