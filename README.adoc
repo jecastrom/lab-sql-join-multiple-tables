@@ -116,6 +116,31 @@ image::https://user-images.githubusercontent.com/63274055/150219956-a1b9d305-692
 
 === What is the average running time of films by category?
 
+`*_Answer:_*`
+
+```sql
+SELECT
+    c.`name` AS film_category,
+    CONCAT(
+        FLOOR(ROUND((AVG(length))) / 60),
+        'h ',
+        MOD(ROUND((AVG(length))), 60),
+        'm'
+    ) AS average_movie_duration
+FROM
+    film f
+    INNER JOIN film_category fc ON f.film_id = fc.film_id
+    INNER JOIN category c ON fc.category_id = c.category_id
+GROUP BY
+    1
+ORDER BY
+    2 DESC;
+```
+
+image::https://user-images.githubusercontent.com/63274055/150233855-cc2b8709-017d-4f59-a2cf-b9a415bc604e.png[width=600]
+
+
+
 === Which film categories are longest?
 
 === Display the most frequently rented movies in descending order.
