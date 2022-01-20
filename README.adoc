@@ -224,7 +224,7 @@ xref:List-the-availability-of-a-film[Bottom section]
 ```sql
 SELECT
     `name` AS film_category,
-    sum(amount) AS total_revenue
+    format(sum(amount), 2, 'de_DE') AS total_revenue
 FROM
     category c
     INNER JOIN film_category fc ON c.category_id = fc.category_id
@@ -240,7 +240,7 @@ LIMIT
     5;
 ```
 
-image::https://user-images.githubusercontent.com/63274055/150244563-53e85820-d5a9-4681-aea6-712ab99eed3a.png[width=600]
+image::https://user-images.githubusercontent.com/63274055/150307473-11ac7a16-e766-4620-947e-b9c258bcc757.png[width=600]
 
 xref:Lab-SQL-Join-Multiple-Tables[Top Section]
 
