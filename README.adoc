@@ -221,7 +221,30 @@ image::https://user-images.githubusercontent.com/63274055/150244563-53e85820-d5a
 
 
 
-=== Is "Academy Dinosaur" available for rent from Store 1?
+=== List the availability of a film
+
+* Is "Academy Dinosaur" available for rent from Store 1
+
+`*_Answer:_*`
+
+```sql
+SELECT
+    f.title AS film_title,
+    i.store_id AS availability_in_store,
+    count(f.title) AS number_of_films_available
+FROM
+    inventory i
+    INNER JOIN film f ON i.film_id = f.film_id
+WHERE
+    title = 'Academy Dinosaur'
+    AND i.store_id = 1
+GROUP BY
+    1
+ORDER BY
+    1;
+```
+
+image::https://user-images.githubusercontent.com/63274055/150247785-d6fc0472-f3c0-4bf4-8a82-037a33b8ed4a.png[width=600]
 
 
 
@@ -242,7 +265,7 @@ image::https://user-images.githubusercontent.com/63274055/150244563-53e85820-d5a
 
 xref:Lab-SQL-Join-Multiple-Tables[Top Section]
 
-xref:Last-section[Bottom section]
+xref:List-the-availability-of-a-film[Bottom section]
 
 //bla bla blafootnote:[{fn-xxx}]
 
