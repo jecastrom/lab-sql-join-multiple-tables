@@ -1,18 +1,13 @@
 SELECT
-    c.`name` AS film_category,
-    CONCAT(
-        FLOOR(ROUND((AVG(length))) / 60),
-        'h ',
-        MOD(ROUND((AVG(length))), 60),
-        'm'
-    ) AS average_movie_duration
+    f.title AS film_title,
+    count(r.inventory_id) AS rental_frequency
 FROM
     film f
-    INNER JOIN film_category fc ON f.film_id = fc.film_id
-    INNER JOIN category c ON fc.category_id = c.category_id
+    INNER JOIN inventory i ON f.film_id = i.film_id
+    INNER JOIN rental r ON i.inventory_id = r.inventory_id
 GROUP BY
     1
 ORDER BY
     2 DESC
 LIMIT
-    4;
+    10;
