@@ -85,6 +85,11 @@ ORDER BY
 
 image::https://user-images.githubusercontent.com/63274055/150211137-c1062ac7-dc7e-4de6-9a41-9b11051b2c9e.png[width=600]
 
+xref:Lab-SQL-Join-Multiple-Tables[Top Section]
+
+xref:List-the-availability-of-a-film[Bottom section]
+
+
 
 
 === Write a query to display how much business, in dollars, each store brought in.
@@ -112,6 +117,10 @@ ORDER BY
 
 image::https://user-images.githubusercontent.com/63274055/150219956-a1b9d305-692d-4513-8266-e2b1e620e9a7.png[width=600]
 
+xref:Lab-SQL-Join-Multiple-Tables[Top Section]
+
+xref:List-the-availability-of-a-film[Bottom section]
+
 
 
 === What is the average running time of films by category?
@@ -138,6 +147,10 @@ ORDER BY
 ```
 
 image::https://user-images.githubusercontent.com/63274055/150233855-cc2b8709-017d-4f59-a2cf-b9a415bc604e.png[width=600]
+
+xref:Lab-SQL-Join-Multiple-Tables[Top Section]
+
+xref:List-the-availability-of-a-film[Bottom section]
 
 
 
@@ -168,6 +181,11 @@ LIMIT
 
 image::https://user-images.githubusercontent.com/63274055/150234709-b83c83e9-332c-4afe-bf74-38d94625c4af.png[width=600]
 
+xref:Lab-SQL-Join-Multiple-Tables[Top Section]
+
+xref:List-the-availability-of-a-film[Bottom section]
+
+
 
 
 === Display the most frequently rented movies in descending order.
@@ -191,6 +209,11 @@ LIMIT
 ```
 
 image::https://user-images.githubusercontent.com/63274055/150238127-fc2aab89-7a11-4f26-8379-73bd86f770a3.png[width=600]
+
+xref:Lab-SQL-Join-Multiple-Tables[Top Section]
+
+xref:List-the-availability-of-a-film[Bottom section]
+
 
 
 
@@ -218,6 +241,11 @@ LIMIT
 ```
 
 image::https://user-images.githubusercontent.com/63274055/150244563-53e85820-d5a9-4681-aea6-712ab99eed3a.png[width=600]
+
+xref:Lab-SQL-Join-Multiple-Tables[Top Section]
+
+xref:List-the-availability-of-a-film[Bottom section]
+
 
 
 
